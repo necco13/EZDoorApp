@@ -6,14 +6,18 @@
     <VerticalStackLayout>
         <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="100"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
             <Label x:Name="Time"
                Text=""
                FontAttributes="Bold"
-               FontSize="25"
+               FontSize="30"
                TextColor="LightBlue"
                HorizontalOptions="CenterAndExpand"
                VerticalOptions="CenterAndExpand"
@@ -21,13 +25,13 @@
             <Label x:Name="Code"
                Text=""
                FontAttributes="Bold"
-               FontSize="25"
+               FontSize="30"
                TextColor="White"
                HorizontalOptions="CenterAndExpand"
                VerticalOptions="CenterAndExpand"
                Grid.Row="0"
                Grid.Column="1"/>
-            <BoxView Color="White" HeightRequest="1" HorizontalOptions="FillAndExpand" Grid.Row="2"/>
+            <BoxView Color="White" HeightRequest="1" HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.ColumnSpan="2"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
