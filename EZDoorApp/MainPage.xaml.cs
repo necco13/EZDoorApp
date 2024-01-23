@@ -2,6 +2,7 @@
 using System.Text.Json;
 using System.Text;
 using Microsoft.Maui.Graphics;
+using System;
 
 namespace EZDoorApp;
 
@@ -34,6 +35,8 @@ public partial class MainPage : ContentPage
         Console.WriteLine(resp);
         if (resp.Equals("true"))
         {
+            await SecureStorage.Default.SetAsync("username", UsernameEntry.Text);
+            await SecureStorage.Default.SetAsync("password", PasswordEntry.Text);
             UsernameEntry.Text = "";
             PasswordEntry.Text = "";
             MessageLabel.Text = "";

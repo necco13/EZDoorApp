@@ -25,8 +25,8 @@ public partial class UserPage : ContentPage
         // Create an anonymous object with the specified properties
         var requestBody = new
         {
-            ime = "nejcnarobe@gmail.com",
-            geslo = "!Geslo13"
+            ime = await SecureStorage.Default.GetAsync("username"),
+            geslo = await SecureStorage.Default.GetAsync("password")
         };
 
         // Serialize the anonymous object to a JSON string
