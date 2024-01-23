@@ -10,10 +10,10 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-                <Entry Placeholder="Username" x:Name="UsernameEntry" />
-                <Entry Placeholder="Password" IsPassword="True" x:Name="PasswordEntry" />
+                <Entry Placeholder="Username" x:Name="UsernameEntry" Text="" />
+                <Entry Placeholder="Password" IsPassword="True" x:Name="PasswordEntry" Text="" />
                 <Button Text="Login" Clicked="OnLoginClicked" />
-                <Label Text="" x:Name="MessageLabel" />
+                <Label Text="" x:Name="MessageLabel" TextColor="Red"/>
 
         </VerticalStackLayout>
     </ScrollView>
