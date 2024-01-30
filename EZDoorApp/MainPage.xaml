@@ -12,7 +12,7 @@
 
                 <Entry Placeholder="Username" x:Name="UsernameEntry" Text="" />
                 <Entry Placeholder="Password" IsPassword="True" x:Name="PasswordEntry" Text="" />
-                <Button Text="Login" Clicked="OnLoginClicked" />
+                <Button Text="Login" TextColor="Black" Clicked="OnLoginClicked" />
                 <Label Text="" x:Name="MessageLabel" TextColor="Red"/>
 
         </VerticalStackLayout>
