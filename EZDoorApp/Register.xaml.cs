@@ -6,10 +6,10 @@ using System;
 
 namespace EZDoorApp;
 
-public partial class MainPage : ContentPage
+public partial class Register : ContentPage
 {
 
-	public MainPage()
+	public Register()
 	{
 		InitializeComponent();
 	}
@@ -17,11 +17,6 @@ public partial class MainPage : ContentPage
 	private async void OnLoginClicked(object sender, EventArgs e)
 	{
         TryLogin();
-    }
-
-    private async void RegisterClicked(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new Register());
     }
 
     private async void TryLogin()
@@ -36,23 +31,24 @@ public partial class MainPage : ContentPage
         string jsonBody = JsonSerializer.Serialize(requestBody);
 
         // Make a POST request with the JSON body
-        string resp = await MakePostRequest("https://ezdoor.azurewebsites.net/api/overi", jsonBody);
-        Console.WriteLine(resp);
-        if (resp.Equals("true"))
+        if (PasswordEntry.Text.Equals(RepeatPasswordEntry.Text))
         {
-            await SecureStorage.Default.SetAsync("username", UsernameEntry.Text);
-            await SecureStorage.Default.SetAsync("password", PasswordEntry.Text);
-            UsernameEntry.Text = "";
-            PasswordEntry.Text = "";
-            MessageLabel.Text = "";
-            await Navigation.PushAsync(new UserPage());
+            string resp = await MakePostRequest("https://ezdoor.azurewebsites.net/api/register", jsonBody);
+            Console.WriteLine(resp);
+            if (resp.Equals("true"))
+            {
+                await Navigation.PopToRootAsync();
+            }
+            else
+            {
+                UsernameEntry.Text = "";
+                PasswordEntry.Text = "";
+                RepeatPasswordEntry.Text = "";
+                MessageLabel.Text = resp;
+            }
         }
         else
-        {
-            UsernameEntry.Text = "";
-            PasswordEntry.Text = "";
-            MessageLabel.Text = "Wrong username or password!";
-        }
+            MessageLabel.Text = "The passwords don't match!";
 
 
     }

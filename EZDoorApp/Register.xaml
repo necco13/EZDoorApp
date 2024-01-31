@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EZDoorApp.MainPage"
-             Title="Login">
+             x:Class="EZDoorApp.Register"
+             Title="Register">
 
     <ScrollView>
         <VerticalStackLayout
@@ -12,9 +12,9 @@
 
                 <Entry Placeholder="Username" x:Name="UsernameEntry" Text="" />
                 <Entry Placeholder="Password" IsPassword="True" x:Name="PasswordEntry" Text="" />
-                <Button Text="Login" TextColor="Black" Clicked="OnLoginClicked" />
+                <Entry Placeholder="Repeat password" IsPassword="True" x:Name="RepeatPasswordEntry" Text="" />
+                <Button Text="Register" TextColor="Black" Clicked="OnLoginClicked" />
                 <Label Text="" x:Name="MessageLabel" TextColor="Red"/>
-                <Button Text="Register" TextColor="Black" Clicked="RegisterClicked" />
 
         </VerticalStackLayout>
     </ScrollView>
