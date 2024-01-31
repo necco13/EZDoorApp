@@ -13,8 +13,9 @@
                 <Entry Placeholder="Username" x:Name="UsernameEntry" Text="" />
                 <Entry Placeholder="Password" IsPassword="True" x:Name="PasswordEntry" Text="" />
                 <Button Text="Login" TextColor="Black" Clicked="OnLoginClicked" />
+            <Button Text="Register" TextColor="White" BackgroundColor="Black" Clicked="RegisterClicked" />
                 <Label Text="" x:Name="MessageLabel" TextColor="Red"/>
-                <Button Text="Register" TextColor="Black" Clicked="RegisterClicked" />
+                
 
         </VerticalStackLayout>
     </ScrollView>

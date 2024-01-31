@@ -35,7 +35,7 @@ public partial class Register : ContentPage
         {
             string resp = await MakePostRequest("https://ezdoor.azurewebsites.net/api/register", jsonBody);
             Console.WriteLine(resp);
-            if (resp.Equals("true"))
+            if (resp.Equals("Succeeded"))
             {
                 await Navigation.PopToRootAsync();
             }
