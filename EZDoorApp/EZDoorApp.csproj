@@ -15,7 +15,7 @@
 		<ApplicationTitle>EZDoor</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.ezdoorapp</ApplicationId>
+		<ApplicationId>com.ezdoor.ezdoor</ApplicationId>
 		<ApplicationIdGuid>8cf88292-4ead-4a2a-8690-6cd2bea50c8c</ApplicationIdGuid>
 
 		<!-- Versions -->
